@@ -6,8 +6,11 @@ const TagItemMini = ({ tag, selected = false }) => {
       key={tag}
       href={selected ? '/' : `/tag/${encodeURIComponent(tag.name)}`}
       passHref
-      className={`cursor-pointer inline-block rounded-xl  hover:text-white duration-200
+      /*className={`cursor-pointer inline-block rounded-xl  hover:text-white duration-200
         mr-2 py-0.5 px-2 text-xs whitespace-nowrap text-white bg-gray-900b`}>
+        */
+        className={`cursor-pointer inline-block rounded-xl  hover:text-white duration-200
+          mr-2 py-0.5 px-2 text-xs whitespace-nowrap text-black dark:text-white bg-gray-200 dark:bg-gray-900`}>
 
       <div className='font-light'>{selected && <i className='mr-1 fa-tag'/>} {tag.name + (tag.count ? `(${tag.count})` : '')} </div>
 

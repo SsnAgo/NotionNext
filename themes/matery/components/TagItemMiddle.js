@@ -6,8 +6,11 @@ const TagItemMiddle = ({ tag, selected = false }) => {
           key={tag}
           href={selected ? '/' : `/tag/${encodeURIComponent(tag.name)}`}
           passHref
+          /*
           className={`cursor-pointer inline-block rounded-xl  hover:text-white duration-200
-        mr-2 py-0.5 px-2 text-md whitespace-nowrap text-white  ${selected ? 'bg-black' : 'bg-gray-900'}`}>
+        mr-2 py-0.5 px-2 text-md whitespace-nowrap text-white  ${selected ? 'bg-black' : 'bg-gray-900'}`}>*/
+        className={`cursor-pointer inline-block rounded-xl  hover:text-white duration-200
+          mr-2 py-0.5 px-2 text-md whitespace-nowrap text-black dark:text-white  ${selected ? 'bg-gray-300 dark:bg-black' : 'bg-gray-200 dark:bg-gray-900'}`}>
 
           <div className='font-light'>
               {selected && <i className='mr-1 fas fa-tag' />}
